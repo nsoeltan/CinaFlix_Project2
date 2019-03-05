@@ -1,0 +1,287 @@
+
+header {
+    position: fixed;
+    height: 80px;   
+    width: 100%; 
+    z-index: 99;
+    background-color:black;     
+    border-bottom: 1px solid blue;
+  }
+
+  .border-top {
+    background-color: black;
+  }
+
+  #search-button {
+     margin-top: 12px;
+  }
+
+#logo {
+    height: 75px;
+    width: 400px;
+    
+    margin-left: 650px;
+}
+
+.form-control {
+    width: 400px;
+    height: 55px;
+    margin-left:10px;
+    margin-top: 9px;
+    border: 5px solid black;     
+}
+
+#toWatch {
+    margin-top: 30px;
+}
+
+.poster {
+width: 218px;
+height: 220px;
+margin: 10px;
+
+}
+.img-responsive{
+    border: 10px solid black;
+    height: 380px;
+    width: 270px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#clear {
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#remove {
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#watchlist {
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#netflix {
+    margin-left: auto;
+    margin-right: auto;
+}
+#amazon {
+    margin-left: auto;
+    margin-right: auto; 
+}
+#hbo {
+    margin-left: auto;
+    margin-right: auto; 
+}
+#hulu {
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+#text {
+    text-align: center;
+}
+
+.img-thumbnail {
+    background-color: black;
+    height: 50px;
+    width: 50px;
+}
+
+.container {
+    margin-top: 50px;
+    width: auto;
+}
+
+.span{
+    max-width: 1170px;
+    margin-top: 50px;
+    background-color: black;
+    border: 5px solid whitesmoke;
+}
+
+.source-image{
+    height: 50px;
+    margin-bottom: 20px;
+    width:100px;
+  }
+
+button {
+    padding: 10px solid black;
+}
+
+.btn-block{
+    width: auto;
+    
+    background-color: black;
+    border: 1px solid blue;
+    
+}
+
+
+body {
+    background-image: url("../images/headerBackground.JPG");
+    background-repeat: no-repeat;
+	background-size: cover;	
+    color: whitesmoke;
+}
+
+ /* Small Devices */
+ @media screen and (max-width : 354px) {
+    body {
+        width: auto;
+    }
+
+    
+    #text {
+
+        margin-top: 60px;
+    }
+    .form-control {
+        width: 221px;
+        height: 49px;
+        margin-bottom: 40px;
+        margin-top: 12px;
+        /* margin-right: 12px; */
+    }   
+
+     #search-button{
+        width: auto;
+        height: 41px;
+        margin-left: 233px;
+        margin-top: -85px;
+       
+    }
+
+    #logo {
+        /* width: 350px;
+        height: 60px;
+        margin-bottom: 60px;
+        margin-top: 100px;
+        position: fixed;
+        z-index: 99; */
+       width: auto;
+    }
+
+    
+    header{
+        width: auto;
+    }
+
+    .main-section {
+        width: auto;
+       
+    }
+    
+    #hulu {
+    margin-bottom: 20px;
+    }
+
+    #clear{
+        width: auto;
+    }
+
+}
+        
+
+/* Small Devices, Tablets */
+@media screen and (max-width : 768px) {
+    body {
+        width: auto;
+    }  
+
+    
+    #text {
+
+        margin-top: 60px;
+    }
+    .form-control {
+        width: 100px;
+        height: 49px;
+        margin-bottom: 40px;
+        margin-top: 12px;
+        /* margin-right: 12px; */
+    }   
+
+    #search-button{
+        
+        /* margin-left: 70px; */
+      
+       
+    }
+
+    #logo {
+        width: auto;
+        margin-left: 400px;
+       
+    }
+
+
+    
+    .main-section {      
+        width: auto;              
+    }
+
+    #logo {
+      margin: 0;
+    }
+    #hulu {
+    margin-bottom: 20px;
+    }
+
+    #clear{
+        width: auto;
+    }
+   
+}
+/* Medium Devices, Desktops */
+@media screen and (max-width : 1366px) {
+    body {
+        width: auto;
+    }
+
+    #search-button{
+        
+        margin-left: 70px;
+      
+       
+    }
+
+    #logo {
+        width: auto;
+        margin-left: 400px;
+       
+    }
+     
+    
+    #text {
+
+        margin-top: 60px;
+    }
+
+    header{
+        width: 1366px;
+    }
+
+    .main-section {
+        width: auto; 
+    }
+
+        #hulu {
+    margin-bottom: 20px;
+    }
+
+    #clear{
+        width: auto;
+    }
+
+
+}

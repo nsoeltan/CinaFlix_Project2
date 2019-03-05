@@ -1,0 +1,142 @@
+<header>
+
+  <div class="row">
+    <div class="col-md-3" id="moviesearch">
+      <form action='/api/new/movie' method=POST>
+        <input name="name" type="text" class="form-control" id="add-movie-input" placeholder="Search by Movie Name">
+    </div>
+    <div class="col-md-1">
+      <button type="submit" class="btn btn-primary btn-lg btn-block" id="search-button"><strong>Search</strong></button>
+      </form>
+    </div>
+
+    <div class="col-md-8" id="moviesearch">
+      <img id="logo" src="assets/images/appLogo.png">
+    </div>
+  </div>
+  </div>
+
+</header>
+<br>
+<br>
+<br>
+
+
+<!-- Creates the Overall Grid -->
+<div class="container">
+  <section class="main-section">
+
+    <!-- Movie Watch List Section -->
+    <div class="row">
+      <div class="col-md-5">
+        {{#each movies}}
+        {{#if this.watched}}
+
+        <div id="text">
+          <h4>Movie to Watch: {{this.movie_name}}</h4>
+        </div>
+
+        <br>
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <img class="img-responsive" id="" src={{this.movie_poster}}>
+
+          <br>
+          <br>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block" id="remove"><strong>Remove From Watch List</strong></button>
+          <br>
+        </form>
+        {{/if}}
+        {{/each}}
+
+      </div>
+
+      <!-- Media Source Links Section -->
+      <div class="col-md-2">
+        <div id="text">
+          <h4>Watch on:</h4>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <button class="btn btn-primary btn-lg btn-block" id="netflix"><a href="https://www.netflix.com/"><img src="assets/images/netflixIcon.png"
+              alt="Netflix" class="img-thumbnail"></a></button>
+
+        <br>
+
+        <button class="btn btn-primary btn-lg btn-block" id="amazon"><a href="https://www.amazon.com/Prime-Video/b?ie=UTF8&node=2676882011"><img
+              src="assets/images/amazonIcon.png" alt="Amazon Prime Video" class="img-thumbnail"></a></button>
+
+        <br>
+
+        <button class="btn btn-primary btn-lg btn-block" id="hbo"><a href="https://www.hbo.com/"><img src="assets/images/hboIcon.png"
+              alt="HBO" class="img-thumbnail"></a></button>
+
+        <br>
+
+        <button class="btn btn-primary btn-lg btn-block" id="hulu"><a href="https://www.hulu.com/welcome?orig_referrer=https%3A%2F%2Fwww.google.com%2F"><img
+              src="assets/images/huluIcon.png" alt="Hulu" class="img-thumbnail"></a></button>
+
+      </div>
+
+      <br>
+
+      <!-- Delete Movie section -->
+      <div class="col-md-5">
+        {{#each movies}}
+        {{#unless this.watched}}
+
+        <form action="/api/new/delete/{{this.id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="watched" value="true">
+          <button type="submit" class="btn btn-primary btn-lg btn-block" id="clear"><strong>Delete</strong></button>
+        </form>
+
+        <br>
+
+        <!-- Searched Movie and associated movie information section -->
+        <div id="text">
+          <h4>Searched Movie: {{this.movie_name}}</h4>
+        </div>
+
+        <br>
+
+        <form action="/api/new/watched/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="watched" value="true">
+          <button type="submit" class="btn btn-primary btn-lg btn-block" id="watchlist"><strong>Add To Watch List</strong></button>
+        </form>
+
+        <br>
+
+
+        <img class="img-responsive" src={{this.movie_poster}}>
+
+        <br>
+
+        <div id="text">
+          <p><strong>Genre: </strong>{{this.movie_genre}}</p>
+          <p><strong>Year: </strong>{{this.movie_year}}</p>
+          <p><strong>Run Time: </strong>{{this.movie_time}}</p>
+          <p><strong>IMDB Rating: </strong>{{this.movie_ratingImdb}}</p>
+          <p><strong>Actors: </strong>{{this.movie_actors}}</p>
+        </div>
+
+        <iframe class="img-responsive" src="https://www.youtube.com/embed/{{this.movie_trailer}}" frameborder="0" allow="autoplay; encrypted-media"
+          allowfullscreen></iframe>
+
+        <br>
+
+        <div id="text">
+          <p><strong>Plot: </strong>{{this.movie_plot}}</p>
+        </div>
+
+        {{/unless}}
+        {{/each}}
+      </div>
+
+
+    </div>
+  </section>
+</div>
