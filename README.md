@@ -18,7 +18,8 @@ The following technologies, frameworks and libraries are used:
 7. JawsDB
 8. MySQL
 
-
+##Deployed App on Heroku:
+https://enigmatic-basin-95816.herokuapp.com/
 
 
 
